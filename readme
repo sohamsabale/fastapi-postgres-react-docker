@@ -1,0 +1,35 @@
+1. Local Development
+    a. FastAPI App
+    b. React App
+        Create react app using "npx create-react-app react-frontend" (need local installation of nodejs for this)
+        Ensure Package.json is Updated to reflect Material-UI installation
+        Add nginx
+    c. Dockerize both apps
+2. Push code to Github
+3. Digitalocean Deployment
+    a. Create DigitalOcean Droplet(linux machine)
+    b. Create a local copy of the repo from github
+    c. Run docker-compose within the droplet
+4. Deploy it to www
+    a. Purchase domain(in this instance-AWS)
+    b. Create Name server records in AWS pointing the domain name to droplet's IP address
+5. Enhacements
+    a. Add SSL certificate(run certbot to obtain SSL certificate)
+    b. CI/CD pipeline - github actions
+        c1. Set Up SSH Keys
+            Generate SSH Keys: Generate SSH keys on your local machine if you haven't already (ssh-keygen -t rsa).
+            Add Public Key to Server: Ensure the public key (id_rsa.pub) is added to your server's ~/.ssh/authorized_keys file.
+        c2. Configure GitHub Secrets
+            Add SSH Key: Go to your GitHub repository.
+            Navigate to Settings -> Secrets -> New repository secret.
+            Add two secrets: DO_SSH_PRIVATE_KEY (contents of your private key file) and DO_SSH_USERNAME (your server username).
+        c3. Add known Hosts
+            ssh-keyscan -H example.com >> ~/.ssh/known_hosts
+            Add this snippet to github actions workflows, deploy.yaml
+
+            - name: Add remote server to known hosts
+            run: |
+                mkdir -p ~/.ssh
+                echo "159.65.184.119(your IP here) ssh-rsa AAAAB3....." >> ~/.ssh/known_hosts
+                echo "159.65.184.119(your IP here) ecdsa-sha2-nistp256 AAAAE2Vj....." >> ~/.ssh/known_hosts
+                echo "159.65.184.119(your IP here) ssh-ed25519 AAAAC3NzaC1lZDI1....." >> ~/.ssh/known_hosts
