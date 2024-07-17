@@ -30,6 +30,6 @@
             - name: Add remote server to known hosts
             run: |
                 mkdir -p ~/.ssh
-                echo "159.65.184.119(your IP here) ssh-rsa AAAAB3....." >> ~/.ssh/known_hosts
-                echo "159.65.184.119(your IP here) ecdsa-sha2-nistp256 AAAAE2Vj....." >> ~/.ssh/known_hosts
-                echo "159.65.184.119(your IP here) ssh-ed25519 AAAAC3NzaC1lZDI1....." >> ~/.ssh/known_hosts
+                echo "localhost(your IP here) ssh-rsa AAAAB3....." >> ~/.ssh/known_hosts
+                echo "localhost(your IP here) ecdsa-sha2-nistp256 AAAAE2Vj....." >> ~/.ssh/known_hosts
+                echo "localhost(your IP here) ssh-ed25519 AAAAC3NzaC1lZDI1....." >> ~/.ssh/known_hosts
