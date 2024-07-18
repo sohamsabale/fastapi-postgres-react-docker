@@ -23,7 +23,7 @@ cd fastapi-postgres-react-docker'''
 '''docker compose up --build'''
 
 ## Once everything is up and running, open your web browser and go to:
-http://159.65.184.119:3000
+http://localhost :3000
 
 
 That's it! You should now see the application running in your browser.

@@ -33,7 +33,7 @@ function App() {
   const [sortOption, setSortOption] = useState('Latest');
   const [error, setError] = useState(null);
 
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://159.65.184.119:8000';
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost :8000';
 
   useEffect(() => {
     if (value === 0) {
