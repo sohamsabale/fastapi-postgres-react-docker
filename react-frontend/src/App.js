@@ -215,7 +215,7 @@ function App() {
           <Box p={3}>
             <Typography variant="h4" align="center">Top Facts Submitted by Users!</Typography>
             <Grid container spacing={4} justifyContent="left">
-              {leaderboardFacts.map(fact => (
+              {leaderboardFacts.slice(0, 9).map(fact => (
                 <Grid item xs={12} sm={6} md={4} key={fact.id}>
                   <Card>
                     <CardContent>
