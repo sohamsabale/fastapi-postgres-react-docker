@@ -33,7 +33,7 @@ function App() {
   const [sortOption, setSortOption] = useState('Latest');
   const [error, setError] = useState(null);
 
-  const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+  const apiUrl = process.env.REACT_APP_API_URL || 'http://159.65.184.119:8000';
 
   useEffect(() => {
     if (value === 0) {
@@ -326,9 +326,12 @@ function App() {
           </Box>
         )}
         {/* Footer Section */}
-        <Box mt={4} mb={2}>
+        <Box mt={4} mb={2} p={2} borderTop={1} borderColor="grey.300">
           <Typography variant="body2" color="textSecondary" align="center" style={{ color: '#808080' }}>
             Dive into Dombivli's Fake Facts - Read, Vote, Submit, and Laugh(?)!
+          </Typography>
+          <Typography variant="body2" color="textSecondary" align="center" style={{ color: '#808080' }}>
+            © {new Date().getFullYear()} Dombivli Facts. All rights reserved.
           </Typography>
         </Box>
       </Container>
