@@ -1,4 +1,4 @@
-# DombivliFacts.com : A Simple Web App with Chatbot
+# DombivliFacts.com : A Simple Web App with LLM Integration
 Welcome to my learning project! This is a simple web application I built to explore fullstack development. It includes a user-friendly interface, a backend server, a database to store information, and a LLM wrapper to interact with Google's Gemini Models.
 I have used DigitalOcean to host the website here - www.dombivlifacts.com . However, I cannot confirm how long it will stay up! Stuff's expensive! 
 
